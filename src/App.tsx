@@ -57,9 +57,7 @@ export default function App() {
 
       {/* Main Content */}
 <main
-  className={`max-w-7xl mx-auto py-4 overflow-y-auto h-[calc(100vh-7rem)] ${
-    activeTab === "other" ? "px-6" : "px-3"
-  }`}
+  className={`max-w-7xl mx-auto px-3 py-4 overflow-y-auto h-[calc(100vh-7rem)]`}
 >
   {renderContent()}
 </main>
