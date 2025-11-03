@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
-import { MapPin, BarChart2 } from "lucide-react";
+import { MapPin, BarChart2, List } from "lucide-react";
 import { WaterQualityOverviewChart } from "./WaterQualityOverviewChart";
 import { WaterQualityDistribution } from "./WaterQualityDistribution";
 import { StationList } from "./StationList";
@@ -110,7 +110,7 @@ export function WaterQualityTab() {
             onClick={() => setViewMode("list")}
             className="flex items-center gap-1 h-8 text-xs px-3"
           >
-            <MapPin className="w-3.5 h-3.5" />
+            <List className="w-3.5 h-3.5" />
             测站列表
           </Button>
           <Button
