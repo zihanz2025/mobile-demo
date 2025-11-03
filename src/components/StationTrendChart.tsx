@@ -42,6 +42,8 @@ export function StationTrendChart() {
     { key: "permanganate", label: "高锰酸盐指数 (mg/L)" },
     { key: "ammonia", label: "氨氮 (mg/L)" },
     { key: "phosphorus", label: "总磷 (mg/L)" },
+    { key: "dissolvedOxygen", label: "溶解氧 (mg/L)" },
+    { key: "ph", label: "pH值" },
   ];
 
   const [selectedStation, setSelectedStation] = useState(stations[0].id);
@@ -75,7 +77,6 @@ export function StationTrendChart() {
       {/* Controls */}
       <div className="flex flex-wrap items-center gap-4 mb-8">
         <div className="space-y-1">
-          <label className="block text-sm text-gray-600">监测站点</label>
           <Select value={selectedStation} onValueChange={setSelectedStation}>
             <SelectTrigger className="w-[160px]">
               <SelectValue placeholder="选择站点" />
@@ -91,7 +92,6 @@ export function StationTrendChart() {
         </div>
 
         <div className="space-y-1">
-          <label className="block text-sm text-gray-600">监测指标</label>
           <Select value={selectedAttribute} onValueChange={setSelectedAttribute}>
             <SelectTrigger className="w-[200px]">
               <SelectValue placeholder="选择指标" />
@@ -107,7 +107,6 @@ export function StationTrendChart() {
         </div>
 
         <div className="space-y-1">
-          <label className="block text-sm text-gray-600">时间范围</label>
           <div className="flex gap-2">
             <button
               onClick={() => setRange(7)}

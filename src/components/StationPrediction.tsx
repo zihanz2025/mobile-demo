@@ -53,10 +53,10 @@ export function StationPrediction() {
             </SelectContent>
           </Select>
 
-          {/* 断面选择 */}
+          {/* 站点选择 */}
           <Select value={region} onValueChange={setRegion}>
             <SelectTrigger className="w-[140px]">
-              <SelectValue placeholder="选择断面" />
+              <SelectValue placeholder="选择站点" />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="沙沟桥">沙沟桥</SelectItem>
@@ -72,10 +72,10 @@ export function StationPrediction() {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="高锰酸盐指数(mg/L)">高锰酸盐指数 (mg/L)</SelectItem>
-              <SelectItem value="pH(无量纲)">pH (无量纲)</SelectItem>
-              <SelectItem value="溶解氧(mg/L)">溶解氧 (mg/L)</SelectItem>
               <SelectItem value="氨氮(mg/L)">氨氮 (mg/L)</SelectItem>
               <SelectItem value="总磷(mg/L)">总磷 (mg/L)</SelectItem>
+              <SelectItem value="溶解氧(mg/L)">溶解氧 (mg/L)</SelectItem>
+              <SelectItem value="pH值">pH值</SelectItem>
             </SelectContent>
           </Select>
         </div>
