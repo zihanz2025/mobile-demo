@@ -41,16 +41,16 @@ export function WaterQualityMap() {
             name: s.MN_NAME,
             lat: s.C_Y,
             lng: s.C_X,
-            type: levelLabels[s.JC_LEVEL] || "未知", // ✅ Use I类 etc. as type
+            type: levelLabels[s.JC_LEVEL] || "未知",
             details: {
               "所属区域": s.STATION_SSQY =1? "东线" : "中线",
               "监测时间": s.MONITOR_TIME?.split("T")[0] || "-",
               "水质类别": levelLabels[s.JC_LEVEL] || "未知",
+              "高锰酸盐指数 (mg/L)": s.PERMANGANATE_INDEX ?? "-",
               "pH": s.PH ?? "-",
               "溶解氧 (mg/L)": s.DISSOLVED_OXYGEN ?? "-",
               "氨氮 (mg/L)": s.AMMONIA_NITROGEN ?? "-",
               "总磷 (mg/L)": s.TOTAL_PHOSPHORUS ?? "-",
-              "高锰酸盐指数": s.PERMANGANATE_INDEX ?? "-",
             },
           }));
 
@@ -69,13 +69,13 @@ export function WaterQualityMap() {
         height="calc(100vh - 250px)"
         showLegend={true}
         typeColors={{
-    "I类": "#10b981",
-    "II类": "#3b82f6",
-    "III类": "#fbbf24",
-    "IV类": "#f59e0b",
-    "V类": "#ef4444",
-    "劣V类": "#991b1b",
-    "未知": "#3b82f6",
+    "I类": "#12B8F1",
+    "II类": "#0E82F1",
+    "III类": "#00EF4E",
+    "IV类": "#FFE50C",
+    "V类": "#FFAA00",
+    "劣V类": "#FF1B1D",
+    "未知": "#000000",
   }}
       />
     </Card>

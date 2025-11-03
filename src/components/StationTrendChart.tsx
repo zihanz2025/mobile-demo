@@ -23,15 +23,17 @@ interface ChartData {
 
 export function StationTrendChart() {
   const stations: Station[] = [
-    { id: "1", name: "长江武汉段" },
-    { id: "2", name: "黄河郑州段" },
-    { id: "3", name: "珠江广州段" },
-    { id: "4", name: "淮河淮安段" },
-    { id: "5", name: "海河天津段" },
+    { id: "1", name: "陶岔" },
+    { id: "2", name: "漳河北" },
+    { id: "3", name: "南营村" },
+    { id: "4", name: "西黑山" },
+    { id: "5", name: "王庆坨" },
+    { id: "6", name: "天津外环河" },
+    { id: "7", name: "惠南庄" },
   ];
 
   const attributes = [
-    { key: "permanganate", label: "高锰酸盐指数" },
+    { key: "permanganate", label: "高锰酸盐指数 (mg/L)" },
     { key: "ammonia", label: "氨氮 (mg/L)" },
     { key: "phosphorus", label: "总磷 (mg/L)" },
   ];

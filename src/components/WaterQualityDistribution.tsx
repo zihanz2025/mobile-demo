@@ -18,12 +18,12 @@ export function WaterQualityDistribution() {
   >([]);
 
   const COLORS = [
-    "#10b981", // I类
-    "#3b82f6", // II类
-    "#fbbf24", // III类
-    "#f59e0b", // IV类
-    "#ef4444", // V类
-    "#991b1b", // 劣V类
+    "#12B8F1", // I类
+    "#0E82F1", // II类
+    "#00EF4E", // III类
+    "#FFE50C", // IV类
+    "#FFAA00", // V类
+    "#FF1B1D", // 劣V类
   ];
 
   const levelLabels: Record<string, string> = {

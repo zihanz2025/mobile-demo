@@ -26,7 +26,7 @@ export function WaterQualityOverviewChart() {
           <p className="text-3xl text-blue-600">142</p>
         </div>
         <div className="bg-green-50 p-4 rounded-lg">
-          <p className="text-sm text-gray-600 mb-1">合格率</p>
+          <p className="text-sm text-gray-600 mb-1">达标率</p>
           <p className="text-3xl text-green-600">68%</p>
         </div>
       </div>

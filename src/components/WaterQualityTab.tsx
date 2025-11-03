@@ -25,7 +25,7 @@ interface StationInfo {
 }
 
 export function WaterQualityTab() {
-  const [viewMode, setViewMode] = useState<"data" | "map" |"list">("data");
+  const [viewMode, setViewMode] = useState<"data" | "map" |"list">("map");
 
   
 
@@ -36,7 +36,6 @@ export function WaterQualityTab() {
       lng: 113.19,
       lat: 35.18,
       type: "中线",
-      status: "normal",
       details: {
         "水质类别": "Ⅲ类",
         "pH值": "7.2",
@@ -49,7 +48,6 @@ export function WaterQualityTab() {
       lng: 115.43,
       lat: 39.27,
       type: "中线",
-      status: "normal",
       details: {
         "水质类别": "Ⅱ类",
         "pH值": "7.5",
@@ -62,7 +60,6 @@ export function WaterQualityTab() {
       lng: 112.46,
       lat: 33.00,
       type: "中线",
-      status: "warning",
       details: {
         "水质类别": "Ⅳ类",
         "pH值": "7.0",
@@ -75,7 +72,6 @@ export function WaterQualityTab() {
       lng: 116.57,
       lat: 35.20,
       type: "中线",
-      status: "normal",
       details: {
         "水质类别": "Ⅲ类",
         "pH值": "7.3",
@@ -88,7 +84,6 @@ export function WaterQualityTab() {
       lng: 116.26823700,
       lat: 39.94567200,
       type: "东线",
-      status: "normal",
       details: {
         "水质类别": "Ⅲ类",
         "pH值": "7.4",
@@ -103,12 +98,12 @@ export function WaterQualityTab() {
       <div className="flex items-center justify-between">
         <div className="flex gap-2">
           <Button
-            variant={viewMode === "data" ? "blue" : "outline"}
-            onClick={() => setViewMode("data")}
+            variant={viewMode === "map" ? "blue" : "outline"}
+            onClick={() => setViewMode("map")}
             className="flex items-center gap-1 h-8 text-xs px-3"
           >
-            <BarChart2 className="w-3.5 h-3.5" />
-            数据总览
+            <MapPin className="w-3.5 h-3.5" />
+            测站地图
           </Button>
           <Button
             variant={viewMode === "list" ? "blue" : "outline"}
@@ -119,12 +114,12 @@ export function WaterQualityTab() {
             测站列表
           </Button>
           <Button
-            variant={viewMode === "map" ? "blue" : "outline"}
-            onClick={() => setViewMode("map")}
+            variant={viewMode === "data" ? "blue" : "outline"}
+            onClick={() => setViewMode("data")}
             className="flex items-center gap-1 h-8 text-xs px-3"
           >
-            <MapPin className="w-3.5 h-3.5" />
-            地图视图
+            <BarChart2 className="w-3.5 h-3.5" />
+            数据概览
           </Button>
         </div>
       </div>
