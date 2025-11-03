@@ -31,6 +31,7 @@ import {
 } from "lucide-react";
 import { AlertEvent } from "./AlertEventList";
 import { InteractiveMapAmap } from "./InteractiveMapAmap";
+import { text } from "stream/consumers";
 
 interface AlertEventDetailProps {
   event: AlertEvent;
@@ -77,35 +78,40 @@ export function AlertEventDetail({ event, onBack }: AlertEventDetailProps) {
           icon: <AlertTriangle className="w-6 h-6" />,
           badgeText: "红色预警",
           iconColor: "text-red-600",
-          bgColor: "bg-red-50",
+          bgColor: "bg-red-100",
+          textColor: "text-red-700",
         };
       case "orange":
         return {
           icon: <AlertCircle className="w-6 h-6" />,
           badgeText: "橙色预警",
           iconColor: "text-orange-600",
-          bgColor: "bg-orange-50",
+          bgColor: "bg-orange-100",
+          textColor: "text-orange-700",
         };
       case "yellow":
         return {
           icon: <Info className="w-6 h-6" />,
           badgeText: "黄色预警",
           iconColor: "text-yellow-600",
-          bgColor: "bg-yellow-50",
+          bgColor: "bg-yellow-100",
+          textColor: "text-yellow-700",
         };
       case "blue":
         return {
           icon: <Info className="w-6 h-6" />,
           badgeText: "蓝色预警",
           iconColor: "text-blue-600",
-          bgColor: "bg-blue-50",
+          bgColor: "bg-blue-100",
+          textColor: "text-blue-700",
         };
       default:
         return {
           icon: <Info className="w-6 h-6" />,
           badgeText: "未知级别",
           iconColor: "text-gray-600",
-          bgColor: "bg-gray-50",
+          bgColor: "bg-gray-100",
+          textColor: "text-gray-700",
         };
     }
   };
@@ -205,7 +211,7 @@ export function AlertEventDetail({ event, onBack }: AlertEventDetailProps) {
                       {event.category}
                     </Badge>
                     <Badge
-                      className={`${config.bgColor} text-xs font-medium px-1.5 py-0.5`}
+                      className={`${config.bgColor} ${config.textColor} text-xs font-medium px-1.5 py-0.5`}
                     >
                       {config.badgeText}
                     </Badge>
