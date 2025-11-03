@@ -51,7 +51,7 @@ export function OtherTab() {
   ];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 pr-4">
       <div className="p-4">
         <h2 className="text-xl">个人中心</h2>
       </div>
