@@ -191,6 +191,54 @@ useEffect(() => {
     }
   };
 
+useEffect(() => {
+  if (!map || !window.AMap) return;
+
+  // WMS base URL with credentials
+  const wmsBaseUrl =
+  "http://admin:beik@1q2w3e@dev.beiktech.com:8605/geoserver/tif/wms";
+
+
+  const layers = [
+    {
+      name:"东线一期工程受水区" ,
+      layer:"tif:jtsz_dxyqgcssq",
+    },
+    {
+      name:"中线线一期工程受水区" ,
+      layer:"tif:jtsz_zxyqgcssq",
+    },
+    {
+      name: "中线一期工程输水路线",
+      layer: "tif:jtsz_zxyqgcsslx",
+    },
+    {
+      name: "东线一期工程输水路线",
+      layer: "tif:jtsz_dxyqgcsslx",
+    }
+  ];
+
+  layers.forEach(({ name, layer }) => {
+    const wmsLayer = new window.AMap.TileLayer.WMS({
+      url: wmsBaseUrl,
+      blend: false,
+      params: {
+        LAYERS: layer,
+        SRS: "EPSG:4326",
+        FORMAT: "image/png",
+        TILED: true,
+        transparent: true,
+      },
+      tileSize: 256,
+      zIndex: 100,
+    });
+
+    wmsLayer.setMap(map);
+  });
+}, [map]);
+
+
+
   return (
     <div className="relative w-full">
       {/* Map */}
