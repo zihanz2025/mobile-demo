@@ -102,10 +102,10 @@ export function StationList() {
             {filteredStations.length > 0 ? (
               filteredStations.map((s, idx) => (
                 <tr key={idx} className="hover:bg-gray-50">
-                  <td className="px-6 py-3 whitespace-nowrap min-w-[160px] font-medium">
+                  <td className="px-6 whitespace-nowrap min-w-[160px] font-medium">
                     {s.MN_NAME}
                   </td>
-                  <td className="px-6 py-3">{getQualityBadge(s.JC_LEVEL)}</td>
+                  <td className="px-3 py-3">{getQualityBadge(s.JC_LEVEL)}</td>
                   <td className="px-6 py-3">{s.PERMANGANATE_INDEX ?? "-"}</td>
                   <td className="px-6 py-3">{s.AMMONIA_NITROGEN ?? "-"}</td>
                   <td className="px-6 py-3">{s.TOTAL_PHOSPHORUS ?? "-"}</td>

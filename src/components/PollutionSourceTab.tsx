@@ -147,7 +147,7 @@ export function PollutionSourceTab() {
       name: w.name,
       lat: w.coordinates.lat,
       lng: w.coordinates.lng,
-      type: "风险点",
+      type: "风险源",
       details: {
         风险等级: w.level,
         位置: w.location,
@@ -211,7 +211,7 @@ export function PollutionSourceTab() {
       ) : (
         // Map view
         <Card className="p-3">
-          <h2 className="mb-3 text-sm font-medium">风险源与管理分布地图</h2>
+          <h2 className="mb-3 text-sm font-medium">风险源与管理处分布地图</h2>
           <InteractiveMapAmap
             locations={mapLocations}
             zoom={10}
@@ -221,7 +221,7 @@ export function PollutionSourceTab() {
     "管理处": "#10b981",
     "应急物资仓库": "#3b82f6",
     "污染源": "#fbbf24",
-    "风险点": "#ef4444",
+    "风险源": "#ef4444",
   }}
           />
         </Card>

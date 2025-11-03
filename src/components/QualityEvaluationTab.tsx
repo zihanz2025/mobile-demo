@@ -27,13 +27,13 @@ export function QualityEvaluationTab() {
   const [period, setPeriod] = useState("week");
 
   const lineData = [
-    { day: "周一", 水温: 22, 叶绿素A: 18 },
-    { day: "周二", 水温: 21.5, 叶绿素A: 17 },
-    { day: "周三", 水温: 21.3, 叶绿素A: 18.2 },
-    { day: "周四", 水温: 21.4, 叶绿素A: 17.8 },
-    { day: "周五", 水温: 21.6, 叶绿素A: 18.1 },
-    { day: "周六", 水温: 21.7, 叶绿素A: 18.0 },
-    { day: "周日", 水温: 21.8, 叶绿素A: 18.3 },
+    { day: "周一", 水温: 22, 叶绿素a: 18 },
+    { day: "周二", 水温: 21.5, 叶绿素a: 17 },
+    { day: "周三", 水温: 21.3, 叶绿素a: 18.2 },
+    { day: "周四", 水温: 21.4, 叶绿素a: 17.8 },
+    { day: "周五", 水温: 21.6, 叶绿素a: 18.1 },
+    { day: "周六", 水温: 21.7, 叶绿素a: 18.0 },
+    { day: "周日", 水温: 21.8, 叶绿素a: 18.3 },
   ];
 
   const barData = [
@@ -83,7 +83,7 @@ export function QualityEvaluationTab() {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="chlorophyll">
-                叶绿素A(mg/L)
+                叶绿素a(mg/L)
               </SelectItem>
               <SelectItem value="ammonia">
                 氨氮(mg/L)
@@ -130,7 +130,7 @@ export function QualityEvaluationTab() {
                 yAxisId="right"
                 orientation="right"
                 label={{
-                  value: "叶绿素A (mg/L)",
+                  value: "叶绿素a (mg/L)",
                   angle: 90,
                   position: "insideRight",
                 }}
@@ -147,7 +147,7 @@ export function QualityEvaluationTab() {
               <Line
                 yAxisId="right"
                 type="monotone"
-                dataKey="叶绿素A"
+                dataKey="叶绿素a"
                 stroke="#ef4444"
                 strokeWidth={2}
               />

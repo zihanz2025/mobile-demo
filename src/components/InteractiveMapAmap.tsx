@@ -237,7 +237,7 @@ useEffect(() => {
             setTypeFilters(new Set());
           }
         }}
-        className="h-3.5 w-3.5"
+        className="h-3.5 w-3.5 data-[state=checked]:bg-gray-500 data-[state=checked]:border-gray-500 data-[state=checked]:text-black"
       />
       <span className="text-xs font-medium text-gray-700">全选</span>
     </label>
@@ -251,7 +251,7 @@ useEffect(() => {
                   <Checkbox
                     checked={typeFilters.has(type)}
                     onCheckedChange={() => toggleTypeFilter(type)}
-                    className="h-3.5 w-3.5"
+                    className="h-3.5 w-3.5 data-[state=checked]:bg-gray-500 data-[state=checked]:border-gray-500 data-[state=checked]:text-black"
                   />
                   <div className="flex items-center gap-1.5">
                     <span

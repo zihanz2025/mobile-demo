@@ -61,8 +61,8 @@ export function RiskWarningList({ warnings, onSelect }: RiskWarningListProps) {
                   <div className="flex items-start justify-between gap-2 mb-1.5">
                     <h4 className="font-medium text-sm">{w.name}</h4>
                     <Badge
-                      variant={style.badge}
-                      className="text-xs px-1.5 py-0.5 flex-shrink-0"
+                      variant="secondary"
+                      className="text-xs px-1.5 py-0.5 flex-shrink-0 "
                     >
                       {w.level}
                     </Badge>
