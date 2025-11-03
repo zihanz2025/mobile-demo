@@ -54,9 +54,11 @@ export function StationTrendChart() {
     const days = range;
     const now = new Date();
     const attrMinMax: Record<string, [number, number]> = {
-      permanganate: [6.5, 8.5],
-      ammonia: [0.05, 1.2],
-      phosphorus: [0.03, 0.3],
+      permanganate: [2, 15],
+      ammonia: [2, 15],
+      phosphorus: [0.02, 0.4],
+      dissolvedOxygen: [2, 7.5],
+      ph: [6, 9],
     };
     const [min, max] = attrMinMax[selectedAttribute];
     return Array.from({ length: days }, (_, i) => {
@@ -71,13 +73,14 @@ export function StationTrendChart() {
   }, [selectedAttribute, range, selectedStation]);
 
   return (
-    <Card className="p-6">
-      <h2 className="text-xl mb-6 font-medium">水质指标趋势分析</h2>
+  <Card className="p-6">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+        <h2 className="text-xl font-medium">水质指标趋势分析</h2>
+
 
       {/* Controls */}
-      <div className="flex flex-wrap items-center gap-4 mb-8">
-        <div className="space-y-1">
-          <Select value={selectedStation} onValueChange={setSelectedStation}>
+      <div className="flex flex-wrap gap-2">
+        <Select value={selectedStation} onValueChange={setSelectedStation}>
             <SelectTrigger className="w-[160px]">
               <SelectValue placeholder="选择站点" />
             </SelectTrigger>
@@ -89,10 +92,8 @@ export function StationTrendChart() {
               ))}
             </SelectContent>
           </Select>
-        </div>
 
-        <div className="space-y-1">
-          <Select value={selectedAttribute} onValueChange={setSelectedAttribute}>
+        <Select value={selectedAttribute} onValueChange={setSelectedAttribute}>
             <SelectTrigger className="w-[200px]">
               <SelectValue placeholder="选择指标" />
             </SelectTrigger>
@@ -104,10 +105,8 @@ export function StationTrendChart() {
               ))}
             </SelectContent>
           </Select>
-        </div>
 
-        <div className="space-y-1">
-          <div className="flex gap-2">
+        <div className="flex gap-2">
             <button
               onClick={() => setRange(7)}
               className={`px-3 py-2 rounded-md border ${
@@ -129,16 +128,24 @@ export function StationTrendChart() {
               最近30天
             </button>
           </div>
-        </div>
+      </div>
       </div>
 
       {/* Line Chart */}
-      <div className="w-full h-[350px]">
-        <ResponsiveContainer width="100%" height="100%">
+
+        <ResponsiveContainer width="100%" height={280}>
           <LineChart data={data}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
             <XAxis dataKey="date" />
-            <YAxis />
+            <YAxis
+            stroke="#9ca3af"
+            label={{
+              value: selectedAttribute.includes("pH") ? "" : "mg/L",
+              angle: -90,
+              position: "insideLeft",
+              fill: "#6b7280",
+            }}
+          />
             <Tooltip />
             <Line
               type="monotone"
@@ -150,7 +157,6 @@ export function StationTrendChart() {
             />
           </LineChart>
         </ResponsiveContainer>
-      </div>
     </Card>
   );
 }

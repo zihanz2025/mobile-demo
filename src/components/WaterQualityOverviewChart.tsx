@@ -23,7 +23,7 @@ export function WaterQualityOverviewChart() {
       <div className="grid grid-cols-2 gap-4 mb-6">
         <div className="bg-blue-50 p-4 rounded-lg">
           <p className="text-sm text-gray-600 mb-1">水质站总数</p>
-          <p className="text-3xl text-blue-600">142</p>
+          <p className="text-3xl text-blue-600">148</p>
         </div>
         <div className="bg-green-50 p-4 rounded-lg">
           <p className="text-sm text-gray-600 mb-1">达标率</p>
@@ -36,8 +36,8 @@ export function WaterQualityOverviewChart() {
         {/* 中线 */}
         <div>
           <div className="flex items-center justify-between mb-2">
-            <span className="text-sm">中线</span>
-            <span className="text-sm">80%</span>
+            <span className="text-sm">中线（56个站点）</span>
+            <span className="text-sm">达标率：80%</span>
           </div>
           <div className="w-full h-8 bg-gray-200 rounded-full overflow-hidden">
             <div 
@@ -50,8 +50,8 @@ export function WaterQualityOverviewChart() {
         {/* 东线 */}
         <div>
           <div className="flex items-center justify-between mb-2">
-            <span className="text-sm">东线</span>
-            <span className="text-sm">56%</span>
+            <span className="text-sm">东线（92个站点）</span>
+            <span className="text-sm">达标率：56%</span>
           </div>
           <div className="w-full h-8 bg-gray-200 rounded-full overflow-hidden">
             <div 
