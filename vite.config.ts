@@ -6,7 +6,7 @@
 
   export default defineConfig({
     plugins: [react(),  viteSingleFile()],
-    base: './',
+    base: '/mobile-demo/',
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
