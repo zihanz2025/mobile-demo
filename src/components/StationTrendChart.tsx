@@ -1,6 +1,5 @@
 import { useState, useMemo } from "react";
 import { Card } from "./ui/card";
-import { Select } from "./ui/select"; // or use your own dropdown component
 import {
   LineChart,
   Line,
@@ -10,6 +9,13 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "./ui/select";
 
 interface Station {
   id: string;
@@ -38,14 +44,10 @@ export function StationTrendChart() {
     { key: "phosphorus", label: "总磷 (mg/L)" },
   ];
 
-  const [selectedStation, setSelectedStation] = useState(
-    stations[0].id,
-  );
-  const [selectedAttribute, setSelectedAttribute] =
-    useState("permanganate");
+  const [selectedStation, setSelectedStation] = useState(stations[0].id);
+  const [selectedAttribute, setSelectedAttribute] = useState("permanganate");
   const [range, setRange] = useState<7 | 30>(7);
 
-  // Generate mock chart data
   const data: ChartData[] = useMemo(() => {
     const days = range;
     const now = new Date();
@@ -61,59 +63,51 @@ export function StationTrendChart() {
       const dateStr = `${d.getMonth() + 1}-${d.getDate()}`;
       const value =
         min +
-        Math.random() *
-          (max - min) *
-          (selectedStation.length / 10);
+        Math.random() * (max - min) * (selectedStation.length / 10);
       return { date: dateStr, value: Number(value.toFixed(2)) };
     });
   }, [selectedAttribute, range, selectedStation]);
 
   return (
     <Card className="p-6">
-      <h2 className="text-xl mb-4">水质指标趋势分析</h2>
+      <h2 className="text-xl mb-6 font-medium">水质指标趋势分析</h2>
 
       {/* Controls */}
-      <div className="flex flex-wrap items-center gap-4 mb-6">
-        <div>
-          <label className="block text-sm text-gray-600 mb-1">
-            监测站点
-          </label>
-          <select
-            value={selectedStation}
-            onChange={(e) => setSelectedStation(e.target.value)}
-            className="border rounded-md px-3 py-2"
-          >
-            {stations.map((s) => (
-              <option key={s.id} value={s.id}>
-                {s.name}
-              </option>
-            ))}
-          </select>
+      <div className="flex flex-wrap items-center gap-4 mb-8">
+        <div className="space-y-1">
+          <label className="block text-sm text-gray-600">监测站点</label>
+          <Select value={selectedStation} onValueChange={setSelectedStation}>
+            <SelectTrigger className="w-[160px]">
+              <SelectValue placeholder="选择站点" />
+            </SelectTrigger>
+            <SelectContent>
+              {stations.map((s) => (
+                <SelectItem key={s.id} value={s.id}>
+                  {s.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
 
-        <div>
-          <label className="block text-sm text-gray-600 mb-1">
-            监测指标
-          </label>
-          <select
-            value={selectedAttribute}
-            onChange={(e) =>
-              setSelectedAttribute(e.target.value)
-            }
-            className="border rounded-md px-3 py-2"
-          >
-            {attributes.map((a) => (
-              <option key={a.key} value={a.key}>
-                {a.label}
-              </option>
-            ))}
-          </select>
+        <div className="space-y-1">
+          <label className="block text-sm text-gray-600">监测指标</label>
+          <Select value={selectedAttribute} onValueChange={setSelectedAttribute}>
+            <SelectTrigger className="w-[200px]">
+              <SelectValue placeholder="选择指标" />
+            </SelectTrigger>
+            <SelectContent>
+              {attributes.map((a) => (
+                <SelectItem key={a.key} value={a.key}>
+                  {a.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
 
-        <div>
-          <label className="block text-sm text-gray-600 mb-1">
-            时间范围
-          </label>
+        <div className="space-y-1">
+          <label className="block text-sm text-gray-600">时间范围</label>
           <div className="flex gap-2">
             <button
               onClick={() => setRange(7)}
@@ -143,10 +137,7 @@ export function StationTrendChart() {
       <div className="w-full h-[350px]">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data}>
-            <CartesianGrid
-              strokeDasharray="3 3"
-              stroke="#e5e7eb"
-            />
+            <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
             <XAxis dataKey="date" />
             <YAxis />
             <Tooltip />
