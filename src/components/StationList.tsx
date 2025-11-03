@@ -90,12 +90,12 @@ export function StationList() {
           <thead className="bg-gray-50 sticky top-0 z-10">
             <tr>
               <th className="px-6 py-3 text-left min-w-[160px]">站点名称</th>
-              <th className="px-6 py-3 text-left">水质类别</th>
-              <th className="px-6 py-3 text-left">高锰酸盐指数(mg/L)</th>
-              <th className="px-6 py-3 text-left">氨氮 (mg/L)</th>
-              <th className="px-6 py-3 text-left">总磷 (mg/L)</th>
-              <th className="px-6 py-3 text-left">pH</th>
-              <th className="px-6 py-3 text-left">溶解氧 (mg/L)</th>
+              <th className="px-3 py-3 text-left whitespace-nowrap min-w-[160px]">水质类别</th>
+              <th className="px-6 py-3 text-left min-w-[160px]">高锰酸盐指数(mg/L)</th>
+              <th className="px-6 py-3 text-left min-w-[160px]">氨氮(mg/L)</th>
+              <th className="px-6 py-3 text-left min-w-[160px]">总磷(mg/L)</th>
+              <th className="px-6 py-3 text-left min-w-[160px]">pH值</th>
+              <th className="px-6 py-3 text-left min-w-[160px]">溶解氧(mg/L)</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200">
