@@ -83,7 +83,7 @@ export function QualityEvaluationTab() {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="chlorophyll">
-                叶绿素A(μg/L)
+                叶绿素A(mg/L)
               </SelectItem>
               <SelectItem value="ammonia">
                 氨氮(mg/L)
@@ -130,7 +130,7 @@ export function QualityEvaluationTab() {
                 yAxisId="right"
                 orientation="right"
                 label={{
-                  value: "叶绿素A (μg/L)",
+                  value: "叶绿素A (mg/L)",
                   angle: 90,
                   position: "insideRight",
                 }}

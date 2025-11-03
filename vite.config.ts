@@ -3,9 +3,10 @@
   import react from '@vitejs/plugin-react-swc';
   import { viteSingleFile } from 'vite-plugin-singlefile';
   import path from 'path';
+  //viteSingleFile()
 
   export default defineConfig({
-    plugins: [react(),  viteSingleFile()],
+    plugins: [react()],
     base: '/mobile-demo/',
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],

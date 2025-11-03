@@ -91,7 +91,7 @@ export function StationList() {
             <tr>
               <th className="px-6 py-3 text-left min-w-[160px]">站点名称</th>
               <th className="px-6 py-3 text-left">水质类别</th>
-              <th className="px-6 py-3 text-left">高锰酸盐指数</th>
+              <th className="px-6 py-3 text-left">高锰酸盐指数(mg/L)</th>
               <th className="px-6 py-3 text-left">氨氮 (mg/L)</th>
               <th className="px-6 py-3 text-left">总磷 (mg/L)</th>
               <th className="px-6 py-3 text-left">pH</th>
