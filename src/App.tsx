@@ -56,9 +56,14 @@ export default function App() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-3 py-4 overflow-y-auto h-[calc(100vh-7rem)]">
-        {renderContent()}
-      </main>
+<main
+  className={`max-w-7xl mx-auto py-4 overflow-y-auto h-[calc(100vh-7rem)] ${
+    activeTab === "other" ? "px-6" : "px-3"
+  }`}
+>
+  {renderContent()}
+</main>
+
 
       {/* Bottom Navigation */}
       <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-20 safe-area-inset-bottom">
