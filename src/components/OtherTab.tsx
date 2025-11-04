@@ -4,12 +4,19 @@ import {
   FileText,
   Users,
   HelpCircle,
+  FileQuestion,
+  Library,
+  ContactIcon,
+  ArchiveIcon,
+  Archive,
+  MessageSquare,
+  MessageCircle,
 } from "lucide-react";
 
 export function OtherTab() {
   const menuItems = [
     {
-      icon: <Settings className="w-6 h-6" />,
+      icon: <FileText className="w-6 h-6" />,
       title: "日报",
       description: "日报查询",
     },
@@ -24,22 +31,22 @@ export function OtherTab() {
       description: "年报查询",
     },
     {
-      icon: <FileText className="w-6 h-6" />,
+      icon: <MessageCircle className="w-6 h-6" />,
       title: "通知",
       description: "历史信息",
     },
     {
-      icon: <Users className="w-6 h-6" />,
+      icon: <HelpCircle className="w-6 h-6" />,
       title: "AI问答",
       description: "智能问答",
     },
         {
-      icon: <Users className="w-6 h-6" />,
+      icon: <Archive className="w-6 h-6" />,
       title: "知识库",
       description: "相关资料查询",
     },
         {
-      icon: <Users className="w-6 h-6" />,
+      icon: <ContactIcon className="w-6 h-6" />,
       title: "通讯录",
       description: "相关人员信息",
     },
