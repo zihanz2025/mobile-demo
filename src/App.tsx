@@ -19,12 +19,8 @@ export default function App() {
     switch (activeTab) {
       case "water":
         return <WaterQualityTab />;
-      case "pollution":
-        return <PollutionSourceTab />;
       case "evaluation":
         return <QualityEvaluationTab />;
-      case "alert":
-        return <AlertTab />;
       case "other":
         return <OtherTab />;
       default:
@@ -64,7 +60,7 @@ export default function App() {
       {/* Bottom Navigation */}
       <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-20 safe-area-inset-bottom">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-5">
+          <div className="grid grid-cols-3">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
