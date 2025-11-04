@@ -12,8 +12,6 @@ export default function App() {
   const tabs = [
     { id: "water", label: "监测", icon: <Droplets className="w-5 h-5" /> },
     { id: "evaluation", label: "分析", icon: <Factory className="w-5 h-5" /> },
-    { id: "pollution", label: "风险", icon: <AlertCircleIcon className="w-5 h-5" /> },
-    { id: "alert", label: "预警", icon: <AlertTriangle className="w-5 h-5" /> },
     { id: "other", label: "个人", icon: <UserCircle className="w-5 h-5" /> }
   ];
 
