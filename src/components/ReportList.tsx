@@ -31,7 +31,7 @@ export function ReportList({ title, description, reports, onBack }: ReportListPr
   };
 
   return (
-    <div className="h-full flex flex-col bg-white">
+    <div className="h-full flex flex-col bg-white pr-4">
       {/* Header */}
       <div className="flex items-center gap-3 py-3 pb-6 border-b bg-gray-50">
         <Button
@@ -106,7 +106,7 @@ export function ReportList({ title, description, reports, onBack }: ReportListPr
 
       {/* PDF Viewer Dialog */}
       <Dialog open={pdfDialogOpen} onOpenChange={setPdfDialogOpen}>
-        <DialogContent className="w-full h-90p p-0 flex flex-col">
+        <DialogContent className="w-full h-90p p-0 flex flex-col rounded-none">
           <DialogHeader className="px-4 py-3 border-b bg-gray-50">
             <div className="flex items-start justify-between gap-3">
               <div className="flex-1 min-w-0">
