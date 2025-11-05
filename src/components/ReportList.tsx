@@ -43,7 +43,7 @@ export function ReportList({ title, description, reports, onBack }: ReportListPr
           <ArrowLeft className="w-4 h-4" />
         </Button>
         <div>
-          <h2 className="text-lg">{title}</h2>
+          <h2 className="text-xl">{title}</h2>
           <p className="text-xs text-gray-500">{description}</p>
         </div>
       </div>
@@ -60,8 +60,8 @@ export function ReportList({ title, description, reports, onBack }: ReportListPr
                 >
                   {/* First Row: Icon + Title */}
                   <div className="flex items-start gap-2 mb-2">
-                    <FileText className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                    <div className="flex-1 min-w-0 font-medium text-sm text-gray-900 leading-snug">
+                    <FileText className="w-5 h-5 text-blue-500 flex-shrink-0 mt-1" />
+                    <div className="flex-1 min-w-0 font-medium text-lg text-gray-900 leading-snug">
                       {report.title}
                     </div>
                   </div>
@@ -76,17 +76,16 @@ export function ReportList({ title, description, reports, onBack }: ReportListPr
                         size="sm"
                         variant="link"
                         onClick={() => handleOpenPdf(report)}
-                        className="h-7 px-2 text-xs text-blue-600 hover:text-blue-700"
+                        className="h-7 px-2 text-sm text-blue-600 hover:text-blue-700"
                       >
                         <Eye className="w-3 h-3 mr-1" />
                         查看
                       </Button>
-                      <span className="text-gray-300">|</span>
                       <Button
                         size="sm"
                         variant="link"
                         onClick={() => window.open(report.fileUrl, "_blank")}
-                        className="h-7 px-2 text-xs text-blue-600 hover:text-blue-700"
+                        className="h-7 px-2 text-sm text-blue-600 hover:text-blue-700"
                       >
                         <Download className="w-3 h-3 mr-1" />
                         下载
@@ -107,7 +106,7 @@ export function ReportList({ title, description, reports, onBack }: ReportListPr
 
       {/* PDF Viewer Dialog */}
       <Dialog open={pdfDialogOpen} onOpenChange={setPdfDialogOpen}>
-        <DialogContent className="max-w-4xl h-80p p-0 flex flex-col">
+        <DialogContent className="w-full h-90p p-0 flex flex-col">
           <DialogHeader className="px-4 py-3 border-b bg-gray-50">
             <div className="flex items-start justify-between gap-3">
               <div className="flex-1 min-w-0">
