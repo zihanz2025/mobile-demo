@@ -61,22 +61,21 @@ export function WaterQualityMap() {
 
   return (
     <Card className="p-3">
-      <h2 className="mb-3 text-sm font-medium">水质监测站点地图</h2>
-
+      <h2 className=" text-xl font-medium">水质监测站点地图</h2>
       <InteractiveMapAmap
         locations={stations}
         zoom={10}
         height="calc(100vh - 250px)"
         showLegend={true}
         typeColors={{
-    "I类": "#12B8F1",
-    "II类": "#0E82F1",
-    "III类": "#00EF4E",
-    "IV类": "#FFE50C",
-    "V类": "#FFAA00",
-    "劣V类": "#FF1B1D",
-    "未知": "#000000",
-  }}
+          "I类": "#12B8F1",
+          "II类": "#0E82F1",
+          "III类": "#00EF4E",
+          "IV类": "#FFE50C",
+          "V类": "#FFAA00",
+          "劣V类": "#FF1B1D",
+          "未知": "#000000",
+        }}
       />
     </Card>
   );
