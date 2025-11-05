@@ -1,4 +1,5 @@
 import { Card } from "./ui/card";
+import { useState } from "react";
 import {
   Settings,
   FileText,
@@ -12,13 +13,18 @@ import {
   MessageSquare,
   MessageCircle,
 } from "lucide-react";
+import { DailyReportList } from "./DailyReportList";
+
+type ViewType = "menu" | "daily-report";
 
 export function OtherTab() {
+  const [currentView, setCurrentView] = useState<ViewType>("menu");
   const menuItems = [
     {
       icon: <FileText className="w-6 h-6" />,
       title: "日报",
       description: "日报查询",
+      onClick: () => setCurrentView("daily-report"),
     },
     {
       icon: <FileText className="w-6 h-6" />,
@@ -57,6 +63,10 @@ export function OtherTab() {
     },
   ];
 
+    if (currentView === "daily-report") {
+    return <DailyReportList onBack={() => setCurrentView("menu")} />;
+  }
+
   return (
     <div className="space-y-6 pr-4">
       <div className="p-4">
@@ -67,6 +77,7 @@ export function OtherTab() {
           <Card
             key={index}
             className="p-6 hover:shadow-lg transition-shadow cursor-pointer"
+            onClick={item.onClick}
           >
             <div className="flex items-center gap-4">
               <div className="p-3 bg-blue-50 text-blue-600 rounded-lg">
