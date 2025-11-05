@@ -549,6 +549,10 @@
     left: calc(var(--spacing) * 0);
   }
 
+    .left-3 {
+    left: calc(var(--spacing) * 3);
+  }
+
   .left-\[50\%\] {
     left: 50%;
   }

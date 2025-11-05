@@ -16,13 +16,13 @@ export function MultiStationAnalysisCard({
   parameter, setParameter, period, setPeriod,section, setSection,
 }: MultiStationAnalysisCardProps) {
   const barData = [
-    { name: "宝应站", permanganate: 1.7 },
-    { name: "洪泽站", permanganate: 2.4 },
-    { name: "金湖站", permanganate: 2 },
-    { name: "泗阳站", permanganate: 2.3 },
-    { name: "刘山站", permanganate: 4.3 },
-    { name: "解台站", permanganate: 3 },
-    { name: "皂河一站", permanganate: 1.9 },
+    { name: "宝应站", CODMn: 1.7 },
+    { name: "洪泽站", CODMn: 2.4 },
+    { name: "金湖站", CODMn: 2 },
+    { name: "泗阳站", CODMn: 2.3 },
+    { name: "刘山站", CODMn: 4.3 },
+    { name: "解台站", CODMn: 3 },
+    { name: "皂河一站", CODMn: 1.9 },
   ];
 
   return (
@@ -81,7 +81,7 @@ export function MultiStationAnalysisCard({
             }}
              />
             <Tooltip />
-            <Bar dataKey="permanganate" fill="#60a5fa" barSize={30} />
+            <Bar dataKey="CODMn" fill="#60a5fa" barSize={30} />
           </BarChart>
         </ResponsiveContainer>
     </Card>
