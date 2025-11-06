@@ -17,7 +17,7 @@ export function WaterQualityOverviewChart() {
 
   return (
     <Card className="p-6">
-      <h2 className="text-xl mb-6">总体水质分析</h2>
+      <h2 className="text-xl mb-6 font-medium">总体水质分析</h2>
       
       {/* Stats */}
       <div className="grid grid-cols-2 gap-4 mb-6">

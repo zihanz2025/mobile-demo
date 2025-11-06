@@ -27,7 +27,7 @@ export function MultiStationAnalysisCard({
 
   return (
     <Card className="p-6">
-      <h2 className="text-xl">水质监测指标趋势分析</h2>
+      <h2 className="text-xl mb-6 font-medium">水质监测指标趋势分析</h2>
 
       {/* Filter Row for Bar Chart */}
       <div className="flex flex-wrap gap-3 items-center mb-3">

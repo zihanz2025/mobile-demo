@@ -43,7 +43,7 @@ export function ReportList({ title, description, reports, onBack }: ReportListPr
           <ArrowLeft className="w-4 h-4" />
         </Button>
         <div>
-          <h2 className="text-xl">{title}</h2>
+          <h2 className="text-xl font-medium">{title}</h2>
           <p className="text-xs text-gray-500">{description}</p>
         </div>
       </div>

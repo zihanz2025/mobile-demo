@@ -29,7 +29,7 @@ export function TrendAnalysisCard({
 
   return (
     <Card className="p-6">
-      <h2 className="text-xl">水质多指标多断面趋势分析</h2>
+      <h2 className="text-xl mb-6 font-medium">水质多指标多断面趋势分析</h2>
 
       {/* Control Row */}
       <div className="flex flex-wrap gap-3 items-center mb-3">

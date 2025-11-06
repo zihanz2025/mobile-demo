@@ -69,8 +69,8 @@ export function OtherTab() {
 
   return (
     <div className="space-y-6 pr-4">
-      <div className="p-4">
-        <h2 className="text-xl">个人中心</h2>
+      <div className="p-6">
+        <h2 className="text-xl font-medium">个人中心</h2>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
         {menuItems.map((item, index) => (
