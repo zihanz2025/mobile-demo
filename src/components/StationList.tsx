@@ -73,13 +73,13 @@ export function StationList() {
         <h2 className="text-xl font-medium">水质站监测数据</h2>
 
         <div className="relative w-48">
-          <Search className="absolute left-2.5 top-5 w-4 h-4 text-gray-400" />
+          <Search className="absolute left-2.5 top-2.5 w-4 h-4 text-gray-400" />
           <Input
             type="text"
             placeholder="搜索站点"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="ml-6 h-9 text-sm"
+            className="pl-8 h-9 text-sm"
           />
         </div>
       </div>
