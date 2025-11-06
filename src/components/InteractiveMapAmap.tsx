@@ -310,29 +310,7 @@ export function InteractiveMapAmap({
               >
                 重置视图
               </Button>
-              {/* 全选 / 全不选 checkbox */}
-              <label className="flex items-center gap-2 cursor-pointer">
-                <Checkbox
-                  checked={
-                    regionFilters.size === allRegions.length
-                  }
-                  indeterminate={
-                    regionFilters.size > 0 &&
-                    regionFilters.size < allRegions.length
-                  }
-                  onCheckedChange={(checked:boolean) => {
-                    if (checked) {
-                      setRegionFilters(new Set(allRegions));
-                    } else {
-                      setRegionFilters(new Set());
-                    }
-                  }}
-                  className="h-3.5 w-3.5 data-[state=checked]:bg-gray-500 data-[state=checked]:border-gray-500 data-[state=checked]:text-black"
-                />
-                <span className="text-xs font-medium text-gray-700">
-                  全国
-                </span>
-              </label>
+
               {/* Region Filters */}
               {allRegions.map((region) => (
                 <label

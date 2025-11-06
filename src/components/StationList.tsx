@@ -67,7 +67,7 @@ export function StationList() {
   }, [stations, searchTerm]);
 
   return (
-    <Card className="p-6 h-[480px] flex flex-col">
+    <Card className="p-6 h-[480px] flex flex-col min-h-0">
       {/* Header + Search */}
       <div className="flex items-center justify-between mb-4 flex-shrink-0">
         <h2 className="text-xl font-medium">水质站监测数据</h2>
@@ -85,8 +85,8 @@ export function StationList() {
       </div>
 
       {/* ✅ Scrollable Table */}
-      <div className="flex-1 overflow-y-auto border rounded-lg">
-        <Table className="min-w-full text-sm">
+      <div className="flex-1 min-h-0 overflow-y-auto">
+        <Table className="w-full text-sm">
           <thead className="bg-gray-50 sticky top-0 z-10">
             <tr>
               <th className="px-6 py-3 text-left min-w-[160px]">站点名称</th>
