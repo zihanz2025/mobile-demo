@@ -69,8 +69,8 @@ export function WaterQualityMap() {
   }, []);
 
   return (
-    <Card className="p-2">
-      <h2 className=" p-4 text-xl font-medium">水质监测站点地图</h2>
+    <Card className="p-3">
+      <h2 className="mt-3 ml-3 text-xl font-medium">水质监测站点地图</h2>
       <InteractiveMapAmap
         locations={stations}
         zoom={10}

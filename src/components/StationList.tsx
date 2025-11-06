@@ -67,25 +67,25 @@ export function StationList() {
   }, [stations, searchTerm]);
 
   return (
-    <Card className="p-6 h-[480px] flex flex-col min-h-0">
+    <Card className="h-[480px] flex flex-col min-h-0">
       {/* Header + Search */}
-      <div className="flex items-center justify-between mb-4 flex-shrink-0">
+      <div className="mt-6 ml-6 mr-6 flex items-center justify-between flex-shrink-0">
         <h2 className="text-xl font-medium">水质站监测数据</h2>
 
         <div className="relative w-48">
-          <Search className="absolute left-2.5 top-2.5 w-4 h-4 text-gray-400" />
+          <Search className="absolute left-2.5 top-5 w-4 h-4 text-gray-400" />
           <Input
             type="text"
             placeholder="搜索站点"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="pl-8 h-9 text-sm"
+            className="ml-6 h-9 text-sm"
           />
         </div>
       </div>
 
       {/* ✅ Scrollable Table */}
-      <div className="flex-1 min-h-0 overflow-y-auto">
+      <div className="p-1 flex-1 min-h-0 overflow-y-auto">
         <Table className="w-full text-sm">
           <thead className="bg-gray-50 sticky top-0 z-10">
             <tr>
