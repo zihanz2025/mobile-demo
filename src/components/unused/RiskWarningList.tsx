@@ -1,5 +1,5 @@
-import { Card } from "./ui/card";
-import { Badge } from "./ui/badge";
+import { Card } from "../ui/card";
+import { Badge } from "../ui/badge";
 import { AlertCircle, Clock, MapPin } from "lucide-react";
 
 export interface RiskWarning {

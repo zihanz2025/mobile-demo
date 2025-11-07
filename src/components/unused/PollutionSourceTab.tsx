@@ -9,7 +9,7 @@ import {
   BarChart2,
 } from "lucide-react";
 import { PollutionSourceDistribution } from "./PollutionSourceDistribution";
-import { RiskWarningList, RiskWarning } from "../RiskWarningList";
+import { RiskWarningList, RiskWarning } from "./RiskWarningList";
 import { InteractiveMapAmap, MapLocation } from "../InteractiveMapAmap";
 
 export function PollutionSourceTab() {
