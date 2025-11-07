@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Card } from "./ui/card";
-import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
-import { Textarea } from "./ui/textarea";
-import { Input } from "./ui/input";
-import { Label } from "./ui/label";
+import { Card } from "../ui/card";
+import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
+import { Textarea } from "../ui/textarea";
+import { Input } from "../ui/input";
+import { Label } from "../ui/label";
 import {
   Dialog,
   DialogContent,
@@ -12,7 +12,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "./ui/dialog";
+} from "../ui/dialog";
 import {
   ArrowLeft,
   MapPin,
@@ -30,7 +30,7 @@ import {
   File,
 } from "lucide-react";
 import { AlertEvent } from "./AlertEventList";
-import { InteractiveMapAmap } from "./InteractiveMapAmap";
+import { InteractiveMapAmap } from "../InteractiveMapAmap";
 import { text } from "stream/consumers";
 
 interface AlertEventDetailProps {

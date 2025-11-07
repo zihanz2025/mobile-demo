@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
-import { Card } from "./ui/card";
-import { Button } from "./ui/button";
+import { Card } from "../ui/card";
+import { Button } from "../ui/button";
 import {
   Factory,
   Droplets,
@@ -9,8 +9,8 @@ import {
   BarChart2,
 } from "lucide-react";
 import { PollutionSourceDistribution } from "./PollutionSourceDistribution";
-import { RiskWarningList, RiskWarning } from "./RiskWarningList";
-import { InteractiveMapAmap, MapLocation } from "./InteractiveMapAmap";
+import { RiskWarningList, RiskWarning } from "../RiskWarningList";
+import { InteractiveMapAmap, MapLocation } from "../InteractiveMapAmap";
 
 export function PollutionSourceTab() {
   const [viewMode, setViewMode] = useState<"data" | "map">("data");

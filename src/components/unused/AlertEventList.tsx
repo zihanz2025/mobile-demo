@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Card } from "./ui/card";
-import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
+import { Card } from "../ui/card";
+import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
 import {
   AlertTriangle,
   AlertCircle,
@@ -14,17 +14,17 @@ import {
   TabsList,
   TabsTrigger,
   TabsContent,
-} from "./ui/tabs";
+} from "../ui/tabs";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "./ui/dialog";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
-import { Label } from "./ui/label";
+} from "../ui/dialog";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
+import { Label } from "../ui/label";
 import { Upload, Plus, Send, Filter } from "lucide-react";
 
 export interface AlertEvent {
