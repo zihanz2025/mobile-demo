@@ -8,7 +8,7 @@ export function QualityEvaluationTab() {
   const [indicator, setIndicator] = useState("chlorophyll");
   const [period, setPeriod] = useState("week");
   const [site, setSite] = useState("taocha");
-  const [section, setSection] = useState("all");
+  const [section, setSection] = useState("zhongxian");
 
   return (
     <div className="space-y-6">

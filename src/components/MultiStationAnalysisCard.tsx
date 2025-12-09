@@ -49,7 +49,6 @@ export function MultiStationAnalysisCard({
             <SelectValue placeholder="区域" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">全国</SelectItem>
             <SelectItem value="dongxian">东线</SelectItem>
             <SelectItem value="zhongxian">中线</SelectItem>
           </SelectContent>

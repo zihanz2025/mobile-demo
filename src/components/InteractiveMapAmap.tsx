@@ -223,7 +223,7 @@ export function InteractiveMapAmap({
     }
   };
 
-  /* useEffect(() => {
+  useEffect(() => {
   if (!map || !window.AMap) return;
 
   // WMS base URL with credentials
@@ -268,7 +268,7 @@ export function InteractiveMapAmap({
     wmsLayer.setMap(map);
   });
 }, [map]);
- */
+
 
   return (
     <div className="relative w-full">
