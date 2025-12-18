@@ -14,8 +14,9 @@ import {
   MessageCircle,
 } from "lucide-react";
 import { DailyReportList } from "./DailyReportList";
+import { ApprovalList } from "./ApprovalList";
 
-type ViewType = "menu" | "daily-report";
+type ViewType = "menu" | "daily-report" | "approval-list";
 
 export function OtherTab() {
   const [currentView, setCurrentView] = useState<ViewType>("menu");
@@ -28,6 +29,11 @@ export function OtherTab() {
     },
     {
       icon: <FileText className="w-6 h-6" />,
+      title: "藻类日报",
+      description: "藻类日报查询",
+    },
+    {
+      icon: <FileText className="w-6 h-6" />,
       title: "月报",
       description: "月报查询",
     },
@@ -35,6 +41,12 @@ export function OtherTab() {
       icon: <FileText className="w-6 h-6" />,
       title: "年报",
       description: "年报查询",
+    },
+    {
+      icon: <FileText className="w-6 h-6" />,
+      title: "审批代办",
+      description: "待审批事项",
+      onClick: () => setCurrentView("approval-list"),
     },
     {
       icon: <MessageCircle className="w-6 h-6" />,
@@ -65,6 +77,10 @@ export function OtherTab() {
 
     if (currentView === "daily-report") {
     return <DailyReportList onBack={() => setCurrentView("menu")} />;
+}
+    if (currentView === "approval-list") {
+  return <ApprovalList onBack={() => setCurrentView("menu")}/>;
+
   }
 
   return (
